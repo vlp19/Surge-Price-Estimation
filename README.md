@@ -6,7 +6,7 @@ Using a dataset of over 1 million trips, I developed a gradient-boosted regressi
 The goal was to move beyond traditional linear pricing models to understand the interaction effects—the specific thresholds where distance, time, and location compound to create exponential price spikes
 
 
-📊 **Key Findings**
+## 📊  Key Findings
 *The 20/30 Threshold*: Surge prices are primarily driven by two physical tipping points: trips exceeding 20 miles or durations exceeding 30 minutes. Beyond these marks, prices increase exponentially rather than linearly.
 
 *The Anchor vs. The Nudge*: Trip Distance is the dominant predictor (SHAP impact up to $140), while temporal factors like "Hour of Day" and "Day of Week" act as minor "nudges" (SHAP impact ±$3), despite common consumer perception that time-of-day is the primary driver.
@@ -14,7 +14,7 @@ The goal was to move beyond traditional linear pricing models to understand the 
 *Model Bias*: The model maintains a +11% over-prediction mode, prioritizing revenue stability and driver compensation in a high-volatility urban market.
 
 
-🛠️ **Tech Stack**
+## 🛠️ Tech Stack
 **Modeling**: LightGBM (Gradient Boosting Regression)
 
 **Explainability**: SHAP (Beeswarm, Waterfall, and Dependence plots)
@@ -32,7 +32,7 @@ Primary Error Bin: -20% to +42%
 
 Feature Importance: Validated through both native LightGBM gain metrics and SHAP global importance rankings.
 
-💡 **Business Logic: "What Could Happen Next"**
+## 💡 Business Logic: "What Could Happen Next"
 The project concludes with a strategic framework for Dynamic Margin Optimization:
 
 1. *GIS-Informed Location Premiums*: Integrating geographic data to identify high-affluence corridors where price elasticity is lower.
@@ -41,7 +41,7 @@ The project concludes with a strategic framework for Dynamic Margin Optimization
 
 3. *Subscription Modeling*: Using SHAP volatility profiles to price "Surge Shield" subscriptions for high-frequency users.
 
-📂 Repository Structure
+## 📂 Repository Structure
 Plaintext
 ├── data/                   # Parquet files (NYC FHV Trip Data)
 ├── notebooks/              # Surge_Price_Estimation.ipynb
@@ -49,7 +49,7 @@ Plaintext
 ├── src/                    # Custom MAPE and utility functions
 └── README.md
 
-🚀 **How to Use**
+## 🚀 How to Use
 Clone the repo: git clone --*https://github.com/yourusername/surge-price-estimation.git*
 
 Install dependencies: pip install -r requirements.txt
